@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging;logging.basicConfig(level=logging.INFO)
 import asyncio, os,json,time
 from datetime import datetime
@@ -16,6 +17,16 @@ async def init(loop):
     logging.info('server started at http://127.0.0.1:9000...')
     return srv
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(init(loop))
-loop.run_forever()
+def t(num):
+    a=0
+    b=1
+    index=0
+    while index<num:
+        a,b=b,a+b
+        print(a)
+        index+=1
+
+t(3)
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(init(loop))
+# loop.run_forever()
